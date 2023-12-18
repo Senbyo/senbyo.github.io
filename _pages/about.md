@@ -9,9 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Building 324, room 180 </p>
-    <p>Richard Petersens Plads</p>
-    <p>2800 Kgs. Lyngby, Denmark</p>
+    <p style="text-align: center;"> Building 324, room 180 </p>
+    <p style="text-align: center;">2800 Kgs. Lyngby, Denmark</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
