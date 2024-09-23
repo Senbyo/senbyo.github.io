@@ -1,7 +1,34 @@
 ---
 ---
 
-@article{Jensen2023Meshlet,
+@InProceedings{Wang_2024_CVPR,
+    author    = {Wang, Lezhong and Frisvad, Jeppe Revall and Jensen, Mark Bo and Bigdeli, Siavash Arjomand},
+    title     = {StereoDiffusion: Training-Free Stereo Image Generation Using Latent Diffusion Models},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2024},
+    pages     = {7416-7425},
+    code = {https://github.com/lez-s/StereoDiffusion},
+}
+
+@article{tran2024Translucent,
+author = {Duc Minh Tran and Mark Bo Jensen and Pablo Santaf\'{e}-Gabarda and Stefan K\"{a}llberg and Alejandro Ferrero and Morten Rieger Hannemose and Jeppe Revall Frisvad},
+journal = {Appl. Opt.},
+keywords = {Absorption coefficient; Bidirectional reflectance distribution function; Camera calibration; Optical properties; Spectral properties; Turbid media},
+number = {16},
+pages = {4317--4331},
+publisher = {Optica Publishing Group},
+title = {Digitizing translucent object appearance by validating computed optical properties},
+volume = {63},
+month = {Jun},
+year = {2024},
+url = {https://opg.optica.org/ao/abstract.cfm?URI=ao-63-16-4317},
+doi = {10.1364/AO.521974},
+abstract = {The optical properties available for an object are most often fragmented and insufficient for photorealistic rendering of the object. We propose a procedure for digitizing a translucent object with sufficient information for predictive rendering of its appearance. Based on object material descriptions, we compute optical properties and validate or adjust this object appearance model based on comparison of simulation with spectrophotometric measurements of the bidirectional scattering-surface reflectance distribution function (BSSRDF). To ease this type of comparison, we provide an efficient simulation tool that computes the BSSRDF for a particular light-view configuration. Even with just a few configurations, the localized lighting in BSSRDF measurements is useful for assessing the appropriateness of computed or otherwise acquired optical properties. To validate an object appearance model in a more common lighting environment, we render the appearance of the obtained digital twin and assess the photorealism of our renderings through pixel-by-pixel comparison with photographs of the physical object.},
+selected = {true},
+}
+
+@article{jensen2023Meshlet,
   bibtex_show={true},
   author =       {Mark Bo Jensen and Jeppe Revall Frisvad and J. Andreas B{\ae}rentzen}, 
   title =        {Performance Comparison of Meshlet Generation Strategies},
