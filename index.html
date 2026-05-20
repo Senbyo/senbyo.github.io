@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Bo Jensen | High Performance Visualization // SciVis</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <meta name="description"
+        content="Research portfolio of Mark Bo Jensen. Specializing in Scientific Visualization, Physically Based Rendering, and high-performance graphics engines.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CRITICAL FIX: Forces the flex container to respect page bounds */
+        .pub-main {
+            min-width: 0;
+        }
+
+        .citation-box {
+            max-width: 100%;
+        }
+
+        .citation-box pre {
+            white-space: pre !important;
+            /* Prevents text from wrapping */
+            word-wrap: normal !important;
+            overflow-x: auto;
+            /* Enables horizontal scroll */
+            padding-bottom: 12px;
+            /* Adds breathing room for the scrollbar */
+            max-width: 100%;
+            /* Keeps the pre block inside the box */
+        }
+
+        /* Custom Dark Theme Scrollbar for WebKit Browsers */
+        .citation-box pre::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .citation-box pre::-webkit-scrollbar-track {
+            background: #27272a;
+            border-radius: 4px;
+        }
+
+        .citation-box pre::-webkit-scrollbar-thumb {
+            background: #52525b;
+            border-radius: 4px;
+        }
+
+        .citation-box pre::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+            /* Highlights blue on hover to match your accent */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        <header>
+            <div class="nav-container">
+                <div class="tech-stack-brand">High Performance Visualization</div>
+                <nav>
+                    <button class="nav-link active" onclick="showPage('about')">About</button>
+                    <button class="nav-link" onclick="showPage('code')">Code</button>
+                    <!-- <button class="nav-link" onclick="showPage('portfolio')">Portfolio</button> -->
+                    <button class="nav-link" onclick="showPage('publications')">Publications</button>
+                    <a href="Mark_Bo_Jensen_CV.pdf" target="_blank" class="nav-link"
+                        style="text-decoration: none;">CV</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="about" class="page active">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h1>Mark Bo Jensen</h1>
+                        <h2>Visualization & Appearance Researcher</h2>
+
+                        <p class="bio">
+                            My research focuses on <strong>high-performance visualization</strong> and the accurate
+                            simulation of <strong>material appearance</strong> for complex 3D structures. Whether the
+                            goal is to highlight underlying geometric properties or to construct high-fidelity digital
+                            twins, my work bridges <strong>Scientific Visualization (SciVis)</strong> and
+                            <strong>Physically Based Rendering (PBR)</strong>. I currently hold a position as a Tenure
+                            Track Assistant Professor at the Technical University of Denmark (DTU).
+                        </p>
+                        <p class="bio" style="margin-top: 1rem;">
+                            <strong>This research is grounded in over a decade of experience</strong> bridging industry
+                            and academia. From my time as a Team Lead at <em>Dalux</em> to my current work, my technical
+                            expertise remains consistent: building bespoke, high-performance rendering architectures
+                            tailored for the most demanding large-scale geometric and volumetric datasets.
+                        </p>
+
+                        <div class="social-icon-row">
+                            <a href="mailto:mboje@dtu.dk" title="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://orcid.org/0000-0002-2387-1568" title="ORCID"><i
+                                    class="ai ai-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?user=kY4fkdYAAAAJ" title="Google Scholar"><i
+                                    class="ai ai-google-scholar"></i></a>
+                            <a href="https://github.com/Senbyo" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/markbojensen/" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@MarkBoJensen" title="YouTube"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                        <p class="contact-note">The best way to reach me is via email.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="profile.jpg" alt="Mark Bo Jensen" class="profile-img">
+                    </div>
+                </div>
+
+                <div class="selected-pubs">
+                    <h3 style="margin-bottom: 1.5rem;">Selected Publications</h3>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/jinsoku.png" alt="Jinsoku Visualization Engine">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-conf">CONFERENCE PROCEEDING</span>
+                            <h4 class="pub-title">Jinsoku: A Data-Centric Visualization Engine</h4>
+                            <div class="pub-authors"><strong>Mark Bo Jensen</strong>, Jeppe Revall Frisvad, A.
+                                Pranovich, S. Murthy, M. Kühl, J. Andreas Bærentzen</div>
+                            <div class="pub-venue">VisGap 2026, Jun 2026</div>
+                            <div class="pub-links">
+                                <a href="https://visgap.gitlab.io/visgap26/" class="pub-btn">📄 PDF</a>
+                                <a href="https://github.com/senbyo/jinsoku" target="_blank" class="pub-btn">💻 Code</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@inproceedings{jensen2026Jinsoku,
+  author = {Jensen, Mark Bo and Frisvad, Jeppe Revall and Pranovich, A. and Murthy, S. and K{\"u}hl, M. and B{\ae}rentzen, J. Andreas},
+  title = {Jinsoku: A Data-Centric Visualization Engine},
+  booktitle = {The Gap between Visualization Research and Visualization Software (VisGap2026)},
+  publisher = {The Eurographics Association},
+  month = {jun},
+  year = {2026},
+  note = {To appear},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/digitizing.jpg" alt="Digitizing Translucent Object Appearance">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-journal">JOURNAL ARTICLE</span>
+                            <h4 class="pub-title">Digitizing translucent object appearance by validating computed
+                                optical properties</h4>
+                            <div class="pub-authors">Duc Minh Tran, <strong>Mark Bo Jensen</strong>, Pablo
+                                Santafé-Gabarda, Stefan Källberg, Alejandro Ferrero, Morten Rieger Hannemose, Jeppe
+                                Revall Frisvad</div>
+                            <div class="pub-venue">Applied Optics, Jun 2024</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@article{tran2024Translucent,
+  author = {Tran, Duc Minh and Jensen, Mark Bo and Santaf\'{e}-Gabarda, Pablo and K\"{a}llberg, Stefan and Ferrero, Alejandro and Hannemose, Morten Rieger and Frisvad, Jeppe Revall},
+  journal = {Appl. Opt.},
+  keywords = {Absorption coefficient; Bidirectional reflectance distribution function; Camera calibration; Optical properties; Spectral properties; Turbid media},
+  number = {16},
+  pages = {4317--4331},
+  publisher = {Optica Publishing Group},
+  title = {Digitizing translucent object appearance by validating computed optical properties},
+  volume = {63},
+  month = {jun},
+  year = {2024},
+  url = {https://opg.optica.org/ao/abstract.cfm?URI=ao-63-16-4317},
+  doi = {10.1364/AO.521974},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/meshletComp.png" alt="Meshlet Generation Demo">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-journal">JOURNAL ARTICLE</span>
+                            <h4 class="pub-title">Performance Comparison of Meshlet Generation Strategies</h4>
+                            <div class="pub-authors"><strong>Mark Bo Jensen</strong>, Jeppe Revall Frisvad, J. Andreas
+                                Bærentzen</div>
+                            <div class="pub-venue">Journal of Computer Graphics Techniques (JCGT), Dec 2023</div>
+                            <div class="pub-links">
+                                <a href="http://jcgt.org/published/0012/02/01/" target="_blank" class="pub-btn">📄
+                                    PDF</a>
+                                <a href="#" class="pub-btn">💻 Code</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@article{jensen2023Meshlet,
+  author = {Jensen, Mark Bo and Frisvad, Jeppe Revall and B{\ae}rentzen, J. Andreas},
+  title = {Performance Comparison of Meshlet Generation Strategies},
+  year = {2023},
+  month = {dec},
+  day = {8},
+  journal = {Journal of Computer Graphics Techniques (JCGT)},
+  volume = {12},
+  number = {2},
+  pages = {1--27},
+  url = {http://jcgt.org/published/0012/02/01/},
+  issn = {2331-7418},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="page">
+                <h2 class="page-title">Visualization Gallery</h2>
+                <p class="section-desc">Real-time rendering and volumetric data processing from custom C++ cores.</p>
+                <div class="masonry-grid"></div>
+            </section>
+
+            <section id="code" class="page">
+                <div class="page-header-flex">
+                    <h2 class="page-title">Open Source / Code</h2>
+                    <a href="https://github.com/Senbyo" target="_blank" class="github-profile-link">
+                        <i class="fab fa-github"></i> View @Senbyo
+                    </a>
+                </div>
+                <p class="section-desc">Selected C++ rendering architectures, visualization engines, and geometry tools.
+                </p>
+
+                <div class="github-grid">
+                    <a href="https://github.com/Senbyo/jinsoku" target="_blank" class="github-card">
+                        <div class="repo-header">
+                            <i class="far fa-bookmark repo-icon"></i>
+                            <h4 class="repo-title">Senbyo / <span>jinsoku</span></h4>
+                        </div>
+                        <p class="repo-desc">Data-centric visualization engine. High-performance C++ architecture for
+                            the real-time processing and rendering of large-scale scientific data.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang"><span class="lang-dot cpp"></span>C++</span>
+                            <span class="repo-stat"><i class="far fa-star"></i> 0</span>
+                            <span class="repo-stat"><i class="fas fa-code-branch"></i> 0</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Senbyo/meshletmaker" target="_blank" class="github-card">
+                        <div class="repo-header">
+                            <i class="far fa-bookmark repo-icon"></i>
+                            <h4 class="repo-title">Senbyo / <span>meshletmaker</span></h4>
+                        </div>
+                        <p class="repo-desc">Hardware-accelerated geometry pipeline tool for evaluating and generating
+                            optimal mesh clustering for real-time rendering constraints.</p>
+                        <div class="repo-meta">
+                            <span class="repo-lang"><span class="lang-dot cpp"></span>C++</span>
+                            <span class="repo-stat"><i class="far fa-star"></i> 126</span>
+                            <span class="repo-stat"><i class="fas fa-code-branch"></i> 7</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="publications" class="page">
+                <h2 class="page-title">Publications</h2>
+
+                <div class="pub-category">
+                    <h3>Core Research (SciVis / PBR)</h3>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/jinsoku.png" alt="Jinsoku Visualization Engine">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-conf">CONFERENCE PROCEEDING</span>
+                            <h4 class="pub-title">Jinsoku: A Data-Centric Visualization Engine</h4>
+                            <div class="pub-authors"><strong>Mark Bo Jensen</strong>, Jeppe Revall Frisvad, A.
+                                Pranovich, S. Murthy, M. Kühl, J. Andreas Bærentzen</div>
+                            <div class="pub-venue">VisGap 2026, Jun 2026</div>
+                            <div class="pub-links">
+                                <a href="https://visgap.gitlab.io/visgap26/" class="pub-btn">📄 PDF</a>
+                                <a href="https://github.com/senbyo/jinsoku" target="_blank" class="pub-btn">💻 Code</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@inproceedings{jensen2026Jinsoku,
+  author = {Jensen, Mark Bo and Frisvad, Jeppe Revall and Pranovich, A. and Murthy, S. and K{\"u}hl, M. and B{\ae}rentzen, J. Andreas},
+  title = {Jinsoku: A Data-Centric Visualization Engine},
+  booktitle = {The Gap between Visualization Research and Visualization Software (VisGap2026)},
+  publisher = {The Eurographics Association},
+  month = {jun},
+  year = {2026},
+  note = {To appear},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/digitizing.jpg" alt="Digitizing Translucent Object Appearance">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-journal">JOURNAL ARTICLE</span>
+                            <h4 class="pub-title">Digitizing translucent object appearance by validating computed
+                                optical properties</h4>
+                            <div class="pub-authors">Duc Minh Tran, <strong>Mark Bo Jensen</strong>, Pablo
+                                Santafé-Gabarda, Stefan Källberg, Alejandro Ferrero, Morten Rieger Hannemose, Jeppe
+                                Revall Frisvad</div>
+                            <div class="pub-venue">Applied Optics, Jun 2024</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@article{tran2024Translucent,
+  author = {Tran, Duc Minh and Jensen, Mark Bo and Santaf\'{e}-Gabarda, Pablo and K\"{a}llberg, Stefan and Ferrero, Alejandro and Hannemose, Morten Rieger and Frisvad, Jeppe Revall},
+  journal = {Appl. Opt.},
+  keywords = {Absorption coefficient; Bidirectional reflectance distribution function; Camera calibration; Optical properties; Spectral properties; Turbid media},
+  number = {16},
+  pages = {4317--4331},
+  publisher = {Optica Publishing Group},
+  title = {Digitizing translucent object appearance by validating computed optical properties},
+  volume = {63},
+  month = {jun},
+  year = {2024},
+  url = {https://opg.optica.org/ao/abstract.cfm?URI=ao-63-16-4317},
+  doi = {10.1364/AO.521974},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/stereodiff.png" alt="StereoDiffusion">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-conf">CONFERENCE PROCEEDING</span>
+                            <h4 class="pub-title">StereoDiffusion: Training-Free Stereo Image Generation Using Latent
+                                Diffusion Models</h4>
+                            <div class="pub-authors">Lezhong Wang, Jeppe Revall Frisvad, <strong>Mark Bo
+                                    Jensen</strong>, Siavash Arjomand Bigdeli</div>
+                            <div class="pub-venue">CVPR Workshops, Jun 2024</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <a href="#" class="pub-btn">💻 Code</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@inproceedings{Wang_2024_CVPR,
+  author = {Wang, Lezhong and Frisvad, Jeppe Revall and Jensen, Mark Bo and Bigdeli, Siavash Arjomand},
+  title = {StereoDiffusion: Training-Free Stereo Image Generation Using Latent Diffusion Models},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month = {jun},
+  year = {2024},
+  pages = {7416-7425},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/meshletComp.png" alt="Meshlet Generation Demo">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-journal">JOURNAL ARTICLE</span>
+                            <h4 class="pub-title">Performance Comparison of Meshlet Generation Strategies</h4>
+                            <div class="pub-authors"><strong>Mark Bo Jensen</strong>, Jeppe Revall Frisvad, J. Andreas
+                                Bærentzen</div>
+                            <div class="pub-venue">Journal of Computer Graphics Techniques (JCGT), Dec 2023</div>
+                            <div class="pub-links">
+                                <a href="http://jcgt.org/published/0012/02/01/" target="_blank" class="pub-btn">📄
+                                    PDF</a>
+                                <a href="#" class="pub-btn">💻 Code</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@article{jensen2023Meshlet,
+  author = {Jensen, Mark Bo and Frisvad, Jeppe Revall and B{\ae}rentzen, J. Andreas},
+  title = {Performance Comparison of Meshlet Generation Strategies},
+  year = {2023},
+  month = {dec},
+  day = {8},
+  journal = {Journal of Computer Graphics Techniques (JCGT)},
+  volume = {12},
+  number = {2},
+  pages = {1--27},
+  url = {http://jcgt.org/published/0012/02/01/},
+  issn = {2331-7418},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout">
+                        <div class="pub-image">
+                            <img src="previews/highDetail.png" alt="Virtual Reality Tools">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-conf">CONFERENCE PROCEEDING</span>
+                            <h4 class="pub-title">Tools for Virtual Reality Visualization of Highly Detailed Meshes</h4>
+                            <div class="pub-authors"><strong>Mark B. Jensen</strong>, Egill I. Jacobsen, Jeppe Revall
+                                Frisvad, J. Andreas Bærentzen</div>
+                            <div class="pub-venue">VisGap - The Gap between Visualization Research and Visualization
+                                Software, Dec 2021</div>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@inproceedings{jensen2021Tools,
+booktitle = {VisGap - The Gap between Visualization Research and Visualization Software},
+editor = {Gillmann, Christina and Krone, Michael and Reina, Guido and Wischgoll, Thomas},
+title = {{Tools for Virtual Reality Visualization of Highly Detailed Meshes}},
+author = {Jensen, Mark B. and Jacobsen, Egill I. and Frisvad, Jeppe Revall and Bærentzen, J. Andreas},
+year = {2021},
+publisher = {The Eurographics Association},
+isbn = {978-3-03868-149-6},
+doi = {10.2312/visgap.20211088},
+                    }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-category">
+                    <h3>Collaborations</h3>
+
+                    <div class="pub-card flex-layout alt-border">
+                        <div class="pub-image">
+                            <img src="previews/visualField.png" alt="VR Visual Field Testing">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-conf">CONFERENCE PROCEEDING</span>
+                            <h4 class="pub-title">Virtual Reality: The Future Of Visual Field Testing</h4>
+                            <div class="pub-authors">Kacper Błażej Gąsior*, <strong>Mark Bo Jensen*</strong>, Jonas
+                                Ulveman Maare, Kevin Doherty, Fiona Bríd Mulvey</div>
+                            <div class="pub-venue">ACM Symposium on Applied Perception 2024</div>
+                            <span class="role-note">Role: Integration of specialized rendering and display
+                                techniques.</span>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@inproceedings{gasior2024VisualField,
+  author = {G\k{a}sior*, Kacper B\l{}a\.{z}ej and Jensen*, Mark Bo and Maare, Jonas Ulveman and Doherty, Kevin and Mulvey, Fiona Br\'{\i}d},
+  title = {Virtual Reality: The Future Of Visual Field Testing},
+  year = {2024},
+  isbn = {9798400710612},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3675231.3678877},
+  doi = {10.1145/3675231.3678877},
+  booktitle = {ACM Symposium on Applied Perception 2024},
+  articleno = {23},
+  numpages = {2},
+  keywords = {mixed reality, perimetry test, virtual reality, vision loss, visual field},
+  location = {Dublin, Ireland},
+  series = {SAP '24}
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card flex-layout alt-border">
+                        <div class="pub-image">
+                            <img src="previews/annotation.png" alt="Anatomical Landmark Annotation">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge badge-journal">JOURNAL ARTICLE</span>
+                            <h4 class="pub-title">Using virtual reality for anatomical landmark annotation in geometric
+                                morphometrics</h4>
+                            <div class="pub-authors">Dolores Messer, Michael Atchapero, <strong>Mark B Jensen</strong>,
+                                Michelle S Svendsen, Anders Galatius, Morten T Olsen, Jeppe R Frisvad, Vedrana A Dahl,
+                                Knut Conradsen, Anders B Dahl</div>
+                            <div class="pub-venue">PeerJ, Dec 2022</div>
+                            <span class="role-note">Role: Optimization of spatial tracking and 3D visualization
+                                systems.</span>
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 PDF</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@article{messer2022Landmark,
+  title = {Using virtual reality for anatomical landmark annotation in geometric morphometrics},
+  author = {Messer, Dolores and Atchapero, Michael and Jensen, Mark B and Svendsen, Michelle S and Galatius, Anders and Olsen, Morten T and Frisvad, Jeppe R and Dahl, Vedrana A and Conradsen, Knut and Dahl, Anders B and others},
+  journal = {PeerJ},
+  volume = {10},
+  pages = {e12869},
+  year = {2022},
+  publisher = {PeerJ Inc.},
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-category">
+                    <h3>Ph.D. Dissertation</h3>
+
+                    <div class="pub-card flex-layout"
+                        style="border-left: 4px solid var(--accent); background: rgba(255, 255, 255, 0.02);">
+                        <div class="pub-image">
+                            <img src="previews/thesis.png" alt="Large Geometric Data Visualization">
+                        </div>
+                        <div class="pub-main">
+                            <span class="badge" style="background: var(--accent); color: #fff;">THESIS</span>
+                            <h4 class="pub-title">Virtual Reality-Based Visualization of Large Geometric Data</h4>
+                            <div class="pub-authors"><strong>Mark Bo Jensen</strong></div>
+                            <div class="pub-venue">Technical University of Denmark (DTU), Dec 2022</div>
+
+                            <p style="font-size: 0.95rem; margin: 12px 0; color: var(--text-muted); line-height: 1.5;">
+                                <strong>Architectural Focus:</strong> While the applied output of this research targeted
+                                interactive environments, the core scientific contribution was the design of
+                                high-performance rendering pipelines. This work established foundational techniques for
+                                the real-time processing, clustering, and visualization of massive geometric datasets
+                                under strict performance constraints.
+                            </p>
+
+                            <div class="pub-links">
+                                <a href="#" class="pub-btn">📄 Read Thesis (PDF)</a>
+                                <button class="pub-btn cite-toggle" onclick="toggleCitation(this)">📋 Cite</button>
+                            </div>
+                            <div class="citation-box">
+                                <button class="copy-icon-btn" onclick="copyCitation(this)" title="Copy to clipboard"><i
+                                        class="fas fa-clipboard"></i></button>
+                                <pre><code>@phdthesis{jensen2022vrvis,
+  author       = {Jensen, Mark Bo}, 
+  title        = {Virtual Reality-Based Visualization of Large Geometric Data},
+  school       = {Technical University of Denmark},
+  year         = {2022},
+  month        = {dec}
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mark Bo Jensen // DTU Engineering Technology and Didactics</p>
+        </footer>
+    </div>
+
+    <script src="helperFunctions.js"></script>
+</body>
+
+</html>
